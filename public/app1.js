@@ -26,7 +26,7 @@ window.addEventListener('load', ()=> {
                         //Set DOM elements from the API
                         temperatureDegree.textContent = temperature;
                         temperatureDescription.textContent = summary;
-                        locationTimezone.textContent=data.timezone;
+                        locationTimezone.textContent="Current City";
                             //celcius formula
 
                             let celcius = (temperature - 32) *(5/9); 

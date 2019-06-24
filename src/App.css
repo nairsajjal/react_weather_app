@@ -64,9 +64,11 @@ body {
   
 }
 .location-timezone{
+  color:#028e76;
   position: relative;
   top:-20px;
   right:-60px;
+  white-space: nowrap;
 }
 .degree-section{
   position: relative;
