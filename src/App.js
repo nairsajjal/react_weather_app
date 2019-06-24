@@ -35,7 +35,7 @@ class App extends React.Component{
      console.log(data);
 
      this.setState({
-       temperature: data.main.temp,
+       temperature: data.main.temp + "°C",
        city:data.name,
        country:data.sys.country,
        humidity:data.main.humidity,
@@ -85,7 +85,7 @@ class App extends React.Component{
             <div className="temperature">
               <div className="degree-section">
                 <h2 className="temperature-degree">40 </h2>
-                <span>F</span>
+                <span>°F</span>
               </div>
               <div className="temperature-description">Its HOT</div>
               
