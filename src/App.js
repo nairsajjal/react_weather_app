@@ -62,10 +62,10 @@ class App extends React.Component{
           <div className="main">
             <div className="container">
               <div className="row">
-                <div className="col-xs-5 title-container">
+                <div className="col-xs-3 title-container">
                   <Titles />
                 </div>
-                <div className="col-xs-7 form-container">
+                <div className="col-xs-6 form-container">
                   <Form getWeather={this.getWeather} />
                   <Weather 
                     temperature={this.state.temperature} 
@@ -75,6 +75,25 @@ class App extends React.Component{
                     description={this.state.description}
                     error={this.state.error}
                   />
+                </div>
+                <div className="col-xs-3 current-container">
+                
+            <div className="location">
+              <h1 className="location-timezone">Timezone</h1>
+              <canvas className="icon" width={128} height={128} />
+            </div>
+            <div className="temperature">
+              <div className="degree-section">
+                <h2 className="temperature-degree">40 </h2>
+                <span>F</span>
+              </div>
+              <div className="temperature-description">Its HOT</div>
+              
+            </div>
+            
+          
+               
+
                 </div>
               </div>
             </div>

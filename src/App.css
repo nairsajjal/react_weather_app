@@ -47,7 +47,66 @@ body {
   line-height: 1.5;
   font-family: "Merriweather", serif;
 }
+.current-container{
+  background-color: #2c3e50;
+  height:90vh;
+  color:whitesmoke;
+  font-weight:lighter;
+  letter-spacing:2px;
+  font-size:20px;
 
+}
+.icon{
+    position:absolute;
+      top:175px;
+      right:90px;
+ 
+  
+}
+.location-timezone{
+  position: relative;
+  top:-20px;
+  right:-60px;
+}
+.degree-section{
+  position: relative;
+  right:-60px;
+}
+
+.temperature-description{
+  position: relative;
+  top:-70px;
+  right:-60px;
+  white-space: nowrap;
+}
+.location,.temperature{
+  height: 40vh;
+  width:50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.temperature{
+      flex-direction: column;
+      
+
+}
+
+.degree-section{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.degree-section span{
+  margin: 5px;
+  font-size: 30px;
+}
+.degree-section h2{
+ 
+  font-size: 40px;
+}
 .form-container {
   background-color: #2c3e50;
   height: 90vh;
