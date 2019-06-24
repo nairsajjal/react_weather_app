@@ -22,9 +22,21 @@ const Weather = props => (
 	 		<span className="weather__value"> { props.description } </span>
 	 </p> 
 	 }
+	 { 	
+	 	props.latitude && <p className="weather__key" id="latitude"> Latitude: 
+	 		<span className="weather__value"> { props.latitude } </span>
+	 	</p> 
+	 }
+	 { 	
+	 	props.longitude && <p className="weather__key" id="longitude"> Longitude: 
+	 		<span className="weather__value"> { props.longitude } </span>
+	 	</p> 
+	 }
+	 
 	 { 
 	 	props.error && <p className="weather__error">{ props.error }</p>  
 	 }
+	 
 	</div>
 );
 

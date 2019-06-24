@@ -8,12 +8,17 @@ window.addEventListener('load', ()=> {
     let temperatureSection = document.querySelector('.temperature');
     const temperatureSpan = document.querySelector('.temperature span');
 
+    const latitude = document.querySelector('.latitude');
+    const longitude = document.querySelector('.longitude');
+    
 
     if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition
                 (position =>{
+                    
                     long = position.coords.longitude;
                     lat = position.coords.latitude;
+                    
                     const proxy= "http://cors-anywhere.herokuapp.com/";
                     const api = `${proxy}https://api.darksky.net/forecast/3bf2a9e336ae958bc14762c97550e252/${lat},${long}`;
                     fetch(api)
@@ -26,7 +31,7 @@ window.addEventListener('load', ()=> {
                         //Set DOM elements from the API
                         temperatureDegree.textContent = temperature;
                         temperatureDescription.textContent = summary;
-                        locationTimezone.textContent="Current City";
+                        locationTimezone.textContent="Your City";
                             //celcius formula
 
                             let celcius = (temperature - 32) *(5/9); 
@@ -70,3 +75,4 @@ window.addEventListener('load', ()=> {
     }
     
 });
+

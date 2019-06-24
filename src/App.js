@@ -2,7 +2,7 @@ import React from "react";
 import Titles from './components/Titles';
 import Form from './components/Form';
 import Weather from './components/Weather';
-
+import Current from './components/Current'
 
 
 const API_KEY = "7337277c92c78a08b60c33b9e85364cf";
@@ -17,7 +17,8 @@ class App extends React.Component{
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: undefined 
+        error: undefined,
+        
 
     }
 
@@ -40,7 +41,8 @@ class App extends React.Component{
        country:data.sys.country,
        humidity:data.main.humidity,
        description:data.weather[0].description,
-       error:""
+       error:"",
+      
      })
     }else{
       this.setState({
@@ -49,7 +51,9 @@ class App extends React.Component{
         country:undefined,
         humidity:undefined,
         description:undefined,
-        error:"Please enter the values"
+        error:"Please enter the values",
+        latitude: undefined,
+       longitude:undefined
       })
 
     }
@@ -73,23 +77,14 @@ class App extends React.Component{
                     city={this.state.city}
                     country={this.state.country}
                     description={this.state.description}
+                   
                     error={this.state.error}
                   />
                 </div>
                 <div className="col-xs-3 current-container">
                 
-            <div className="location">
-              <h1 className="location-timezone">Timezone</h1>
-              <canvas className="icon" width={128} height={128} />
-            </div>
-            <div className="temperature">
-              <div className="degree-section">
-                <h2 className="temperature-degree">40 </h2>
-                <span>°F</span>
-              </div>
-              <div className="temperature-description">Its HOT</div>
-              
-            </div>
+                    <Current 
+                    />
             
           
                
