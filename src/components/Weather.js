@@ -1,4 +1,8 @@
 import React from "react";
+var imgStyle = {
+	height: '100px' ,width:'100px' ,position: 'relative', right: '-25px', bottom: '10px'
+}
+
 
 const Weather = props => (
 	<div className="weather__info">
@@ -23,15 +27,11 @@ const Weather = props => (
 	 </p> 
 	 }
 	 { 	
-	 	props.latitude && <p className="weather__key" id="latitude"> Latitude: 
-	 		<span className="weather__value"> { props.latitude } </span>
-	 	</p> 
+	 	props.icon && <p className="weather__key"> Icon: 
+	 	<span className="weather__value"> <img src={require('../icons/'+props.icon+'.png')} alt="icon" style={imgStyle}/></span>
+	 </p> 
 	 }
-	 { 	
-	 	props.longitude && <p className="weather__key" id="longitude"> Longitude: 
-	 		<span className="weather__value"> { props.longitude } </span>
-	 	</p> 
-	 }
+	 
 	 
 	 { 
 	 	props.error && <p className="weather__error">{ props.error }</p>  

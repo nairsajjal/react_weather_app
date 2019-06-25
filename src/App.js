@@ -19,7 +19,8 @@ class App extends React.Component{
         description: undefined,
         error: undefined,
         
-
+        icon:undefined
+        
     }
 
   getWeather  = async(e) => {
@@ -42,6 +43,8 @@ class App extends React.Component{
        humidity:data.main.humidity,
        description:data.weather[0].description,
        error:"",
+       icon:data.weather[0].icon,
+       
       
      })
     }else{
@@ -52,8 +55,7 @@ class App extends React.Component{
         humidity:undefined,
         description:undefined,
         error:"Please enter the values",
-        latitude: undefined,
-       longitude:undefined
+       icon:undefined
       })
 
     }
@@ -79,6 +81,7 @@ class App extends React.Component{
                     description={this.state.description}
                    
                     error={this.state.error}
+                    icon={this.state.icon}
                   />
                 </div>
                 <div className="col-xs-3 current-container">
